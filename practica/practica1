@@ -1,0 +1,24 @@
+<!Doctype html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejemplo 01</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <h1>Esta es mi página</title>
+        <div>
+            <p id="especial">Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Eaque quo pariatur laborum
+              asperiores cum labore ad ducimus ipsam animi enim blanditiis
+              aliquid itaque deserunt debitis molestias corrupti eum, porro
+               facilis?</p>
+               <p>Lorem ipsum dolor <span class="atencion"> sit amet consectetur adipisicing elit</span>. 
+                Impedit, libero! Iusto voluptaten quidem at, ad labore aut, vitae possimus similique omnis 
+                animi quam asperiores porro error harum blanditiis. Fuga, unde.</p>
+        </div>
+        <img src=""alt="">
+        <a href="ejemplo-02.html">Click Me!</a>
+    </body>
+</html>

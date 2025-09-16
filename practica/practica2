@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página #2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="atencion"> SEGUNDA PAGINA</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <strong class="atención">Delenniti repellat facere a porro asse distinctio</strong>
+    corporis, quibusdam animi nesciunt earum minima recusandae eaque,
+    vel, ea exercitationem. Optio, laborum quita! Magnam.</p>
+    <a href="ejemplo-01.html">Click Me</a>
+</body>
+</html>

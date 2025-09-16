@@ -1,0 +1,26 @@
+*{
+ /* paddin: 0%;
+   margin: 10%; */
+}
+h1 {
+    color:red;
+    background-color: pink;
+    display: block;
+}
+p {/* border: 2px solid red; */
+padding: 20px;
+margin:20px;
+color: #333;
+font-family: Arial, Helvetica, sans-serif;
+font-size: x-large;
+}
+#especial {
+     color: darkred;
+     text-decoration: line-through;
+}
+div{
+    background-color: aliceblue;
+    margin: 10px;
+    box-shadow:0px 0px 10px gray;
+    display: none;
+}
