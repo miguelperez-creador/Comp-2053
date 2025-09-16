@@ -1,0 +1,42 @@
+/* Selector universal */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Estilo para el título */
+h1 {
+    background-color:rgb(7, 7, 7) (68, 255, 0);
+    background-color:rgb(45, 231, 7);
+    text-align: center;
+    padding: 15px;
+}
+
+/* Estilo para párrafos */
+p {
+    padding: 20px;
+    margin: 20px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+/* Estilo especial (tachado) */
+#especial {
+    color:rgb(243, 191, 3);
+    text-decoration: line-through;
+}
+
+/* Estilo para elementos destacados */
+   .resaltado {
+    font-weight: bold;
+    color: rgb(1, 16, 235);
+   }
+
+/* Estilo opcional para la lista */
+ ul {
+    margin: 20px;
+    padding-left: 40px;
+    font-size: large;
+ }
