@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout - Deportes Disponibles</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+            height: 100vh;
+        }
+
+        header {
+            grid-column: 1 / 4;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        main {
+            grid-column: 2 / 4;
+            grid-row: 2 / 3;
+            background-color: #ddd;
+            padding: 20px;
+        }
+
+        footer {
+            grid-column: 1 / 4;
+            grid-row: 3 / 4;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        nav li {
+            margin-bottom: 5px;
+        }
+
+        /* Enlace al inicio */
+        .volver-inicio {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .volver-inicio a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .volver-inicio a:hover {
+            color: #004999;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header>
+            <h1>Deportes Disponibles</h1>
+        </header>
+
+        <nav>
+            <h2>Secciones</h2>
+            <ul>
+                <li>Fútbol</li>
+                <li>Baloncesto</li>
+                <li>Natación</li>
+                <li>Atletismo</li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Información Principal</h2>
+            <p>Aquí puedes ver los deportes disponibles y horarios generales.</p>
+            <div class="volver-inicio">
+                <a href="index.html">← Volver a la página principal</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>Fin de la página - Centro Deportivo</p>
+        </footer>
+    </div>
+</body>
+</html>

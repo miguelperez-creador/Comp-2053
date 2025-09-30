@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Responsivo - Entrenadores y Consejos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+            height: 100vh;
+        }
+
+        header {
+            grid-column: 1 / 4;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        main {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            background-color: #ddd;
+            padding: 20px;
+        }
+
+        aside {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+            background-color: #eee;
+            padding: 20px;
+        }
+
+        footer {
+            grid-column: 1 / 4;
+            grid-row: 3 / 4;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav ul, aside ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        nav li, aside li {
+            margin-bottom: 5px;
+        }
+
+        .volver-inicio {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .volver-inicio a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+
+        .volver-inicio a:hover {
+            color: #004999;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto auto auto;
+            }
+
+            nav { grid-row: 2 / 3; }
+            main { grid-row: 3 / 4; }
+            aside { grid-row: 4 / 5; }
+            footer { grid-row: 5 / 6; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header>
+            <h1>Entrenadores y Consejos</h1>
+        </header>
+
+        <nav>
+            <h2>Deportes</h2>
+            <ul>
+                <li>Fútbol</li>
+                <li>Baloncesto</li>
+                <li>Natación</li>
+                <li>Atletismo</li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Consejos para Estudiantes</h2>
+            <ul>
+                <li>Traer ropa deportiva adecuada.</li>
+                <li>Llegar a tiempo a las prácticas.</li>
+                <li>Hidratación antes y después del entrenamiento.</li>
+            </ul>
+            <div class="volver-inicio">
+                <a href="index.html">← Volver a la página principal</a>
+            </div>
+        </main>
+
+        <aside>
+            <h2>Entrenadores Disponibles</h2>
+            <ul>
+                <li>Juan Pérez - Fútbol</li>
+                <li>Ana López - Baloncesto</li>
+                <li>Carlos Ruiz - Natación</li>
+                <li>María Torres - Atletismo</li>
+            </ul>
+        </aside>
+
+        <footer>
+            <p>Fin de la página - Centro Deportivo</p>
+        </footer>
+    </div>
+</body>
+</html>
