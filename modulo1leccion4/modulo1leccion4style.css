@@ -24,7 +24,7 @@ p {
 
 /* Estilo especial (tachado) */
 #especial {
-    color:rgb(243, 191, 3);
+    color:rgb(223, 223, 222);
     text-decoration: line-through;
 }
 
