@@ -5,35 +5,38 @@ const botonColor = document.getElementById('cambiarColor');
 const botonOcultar = document.getElementById('ocultarParrafo');
 const botonMostrar = document.getElementById('mostrarParrafo');
 
-// Cambiar color del título y añadir un enlace al hacer clic
+// Guardamos colores originales usando getComputedStyle
+const estilosTitulo = getComputedStyle(titulo);
+const colorOriginalTitulo = estilosTitulo.color;
+
+const encabezado = document.getElementById('encabezado');
+const estilosEncabezado = getComputedStyle(encabezado);
+const fondoOriginalEncabezado = estilosEncabezado.backgroundImage || estilosEncabezado.background;
+
+// Variable para alternar
+let colorCambiado = false;
+
+// Cambiar color del título y fondo con toggle
 botonColor.addEventListener('click', () => {
-    // Cambiar color del título
-    titulo.style.color = 'white';
+    if (!colorCambiado) {
+        titulo.style.color = 'white';
+        encabezado.style.background = 'linear-gradient(90deg, #40E0D0, #0ea5e9)';
+    } else {
+        titulo.style.color = colorOriginalTitulo;
+        encabezado.style.background = fondoOriginalEncabezado;
+    }
+    colorCambiado = !colorCambiado;
 
-    // Cambiar el fondo del encabezado
-    document.getElementById('encabezado').style.background = 'linear-gradient(90deg, #40E0D0, #0ea5e9)';
-
-    // Crear el enlace si no existe
+    // Crear o mostrar el enlace (igual que antes)
     let enlace = document.getElementById('nuevo-enlace');
     if (!enlace) {
         enlace = document.createElement('a');
         enlace.href = 'https://www.elmundo.es/tecnologia.html';
         enlace.textContent = 'Para más información visita el siguiente enlace';
         enlace.id = 'nuevo-enlace';
-        enlace.target = '_blank'; // abrirá en nueva pestaña
+        enlace.target = '_blank';
         contenedor.appendChild(enlace);
     } else {
-        // Si ya existe pero estaba oculto, mostrarlo
         enlace.style.display = 'block';
     }
-});
-
-// Ocultar el segundo párrafo
-botonOcultar.addEventListener('click', () => { 
-    parrafo2.style.display = 'none'; 
-});
-
-// Mostrar el segundo párrafo
-botonMostrar.addEventListener('click', () => { 
-    parrafo2.style.display = 'block'; 
 });
