@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bienvenidos al mundo de la tecnología</title>
+
+    <style>
+        /* ====== ESTILO BASE ====== */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #0f172a; /* Fondo azul oscuro tipo tecnología */
+            color: #e2e8f0; /* Texto claro */
+        }
+
+        /* ====== ENCABEZADO ====== */
+        #encabezado {
+            background: linear-gradient(90deg, #3a7ca5, #0ea5e9);
+            padding: 25px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        #titulo {
+            font-size: 30px;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* ====== CONTENEDOR ====== */
+        #contenedor {
+            background-color: #5e77a0; /* gris azulado */
+            padding: 20px;
+            margin: 30px auto;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 700px;
+            box-shadow: 0 0 15px rgba(59,130,246,0.3);
+        }
+
+        #contenedor p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        /* ====== BOTONES ====== */
+        .btn {
+            margin: 8px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #3a7ca5; /* azul principal */
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(59,130,246,0.5);
+        }
+
+        .btn:hover {
+            background-color: #0ea5e9;
+            box-shadow: 0 0 15px rgba(14,165,233,0.8);
+        }
+
+        /* ====== ENLACE DINÁMICO ====== */
+        #nuevo-enlace {
+            display: none;
+            margin-top: 15px;
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #nuevo-enlace:hover {
+            color: #0ea5e9;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====== ENCABEZADO ====== -->
+    <header id="encabezado">
+        <h1 id="titulo">Bienvenidos a la tecnología</h1>
+    </header>
+
+    <!-- ====== CONTENIDO ====== -->
+    <div id="contenedor">
+        <p id="parrafo1"> La tecnología es un universo en constante evolución donde cada día surgen nuevas herramientas y soluciones que transforman nuestra vida cotidiana. Desde la comunicación hasta la educación y el entretenimiento, la tecnología se ha convertido en el motor que impulsa el progreso y la innovación en todos los ámbitos. Explorar este mundo nos permite descubrir posibilidades infinitas y estar preparados para los desafíos del futuro.</p>
+        <p id="parrafo2"> Es un mundo donde la creatividad se une con la ciencia para crear experiencias sorprendentes. Cada avance tecnológico abre puertas a nuevas oportunidades, ya sea en la medicina, la ingeniería o el arte digital. Sumergirse en este entorno significa aprender a adaptarse, a experimentar y a aprovechar al máximo los recursos que la innovación nos ofrece.</p>
+        <p id="parrafo3"> También, es un espacio en el que la información y la conectividad redefinen la manera en que interactuamos con el mundo. Aquí, los dispositivos y aplicaciones no solo facilitan nuestras tareas diarias, sino que también fomentan la colaboración global y el intercambio de ideas. Comprender este mundo nos permite participar activamente en la construcción de un futuro más inteligente y conectado.</p>
+        <a id="nuevo-enlace"       │
+    │     href="https://www.elmundo.es/tecnologia.html" │
+    │     target="_blank">Para más información visita el siguiente enlace</a> 
+    </div>
+  
+    <!-- ====== BOTONES ====== -->
+    <div style="text-align:center;">
+    <button id="cambiarColor" class="btn">Cambiar color del título</button><br>
+    <button id="mostrarEnlace" class="btn">Añadir enlace</button><br>
+    <button id="ocultarParrafo" class="btn">Ocultar segundo párrafo</button><br>
+    <button id="mostrarParrafo" class="btn">Mostrar segundo párrafo</button>
+</div>
+
+
+    <script>
+        const titulo = document.getElementById('titulo');
+        const contenedor = document.getElementById('contenedor');
+        const parrafo2 = document.getElementById('parrafo2');
+        const botonColor = document.getElementById('cambiarColor');
+        const botonOcultar = document.getElementById('ocultarParrafo');
+        const botonMostrar = document.getElementById('mostrarParrafo');
+        const enlace = document.getElementById('nuevo-enlace');
+        const botonEnlace = document.getElementById('mostrarEnlace');
+
+
+        // Cambiar color del título y añadir un enlace
+        botonColor.addEventListener('click', () => {
+            titulo.style.color = 'white'; // título siempre blanco
+            document.getElementById('encabezado').style.background = 'linear-gradient(90deg, #40E0D0, #0ea5e9)';
+        });
+
+        // Mostrar u ocultar link
+        botonEnlace.addEventListener('click', () => {
+            if (enlace.style.display === 'none' || enlace.style.display === "") {
+                enlace.style.display = "inline";
+                botonEnlace.textContent = "Ocultar Enlace"
+            }
+            else {
+                enlace.style.display = "none";
+                botonEnlace.textContent = "Mostrar Enlace"
+            }
+        });
+        
+        // Ocultar y mostrar párrafo
+        botonOcultar.addEventListener('click', () => { parrafo2.style.display = 'none'; });
+        botonMostrar.addEventListener('click', () => { parrafo2.style.display = 'block'; });
+    </script>
+
+</body>
+</html>
